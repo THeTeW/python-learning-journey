@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ข่าว BBC ล่าสุด</title>
+    <style>
+        body { font-family: sans-serif; }
+        li { margin-bottom: 10px; }
+        a { text-decoration: none; color: #1A5276; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>📰 หัวข้อข่าวล่าสุดจาก BBC Thai</h1>
+
+    <ul>
+        {% for news_item in news_list %}
+            <li>
+                <a href="{{ news_item.link }}" target="_blank">
+                    {{ news_item.title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
